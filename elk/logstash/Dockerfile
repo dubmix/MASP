@@ -4,6 +4,7 @@ RUN apt-get update
 RUN apt-get install -y wget
 RUN apt-get install -y gpg
 RUN apt-get install -y vim
+RUN apt-get install -y default-jdk
 
 RUN wget -qO- https://artifacts.elastic.co/GPG-KEY-elasticsearch | gpg --dearmor -o /usr/share/keyrings/elasticsearch-keyring.gpg
 
