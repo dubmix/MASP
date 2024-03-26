@@ -91,7 +91,7 @@ def process_request():
     model = TypeAdapter(GPTResponse).validate_python(gpt_response)
     answer = model.choices[0].message.content
     logger.debug(f"{bubble_id} | Answer sent to frontend: {answer}")
-    logger.info(f"{bubble_id} | Prompt tokens useed: {model.usage.prompt_tokens}")
+    logger.info(f"{bubble_id} | Prompt tokens used: {model.usage.prompt_tokens}")
     logger.info(f"{bubble_id} | Completion tokens used: {model.usage.completion_tokens}")
     logger.info(f"{bubble_id} | Total tokens used: {model.usage.total_tokens}")
 
